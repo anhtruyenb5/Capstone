@@ -21,7 +21,6 @@ ul {
 
 .content__div {
     padding: 50px 0;
-    align-items: center;
 }
 
 .sub__title {
@@ -71,4 +70,66 @@ ul {
 
 .img__dog {
     border-radius: 10px;
+}
+
+.content__right {
+    align-self: center;
+}
+
+/* number */
+.number {
+    background-color: #189A46;
+}
+
+.count__number {
+    padding: 50px 0;
+}
+
+.number__item {
+    text-align: center;
+    padding: 0;
+    border-top: none;
+    border-bottom: none;
+}
+
+.number__item p {
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.number__item h4 {
+    font-size: 20px;
+    line-height: 25px;
+    text-transform: capitalize;
+    color: #fff;
+    margin-top: 10px;
+    opacity: 0.8;
+    font-weight: 400;
+}
+
+@media (max-width: 992px) {
+    .number__item p {
+        font-size: 40px !important;
+        line-height: 50px;
+    }
+
+    .number__item h4 {
+        font-size: 10px !important;
+    }
+}
+
+@media (max-width: 737px) {
+    .number__item p {
+        font-size: 35px !important;
+        line-height: 38px;
+        margin-top: 20px;
+    }
+
+    .number__item h4 {
+        font-size: 17px !important;
+    }
 }
