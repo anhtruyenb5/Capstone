@@ -1,3 +1,28 @@
 .content {
     padding: 100px 0;
 }
+
+.sub__title {
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 2em;
+    letter-spacing: 1px;
+    color: #f53626;
+}
+
+.hny__title {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 48px;
+    text-transform: capitalize;
+}
+
+.content p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24.5px;
+    color: var(--para-color);
+    margin: 15px 0 35px 0;
+}
