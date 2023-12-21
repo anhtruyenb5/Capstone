@@ -1,0 +1,356 @@
+/*! GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+.container {
+    max-width: 1199px;
+    width: 80%;
+    margin: auto;
+}
+
+
+a.read {
+    display: inline-block;
+    width: 90px;
+    font-size: 17px;
+    border-bottom: 2px solid green;
+    font-weight: 600;
+    color: black;
+    border-radius: 0;
+    transition: color 0.5s ease-in-out;
+    margin: 20px 0;
+    padding-bottom: 5px;
+    text-decoration: none;
+}
+
+a.read:hover,
+.dark a.read:hover {
+    color: green;
+    transition: color 0.2s ease-in-out;
+}
+
+/* Light theme */
+#myBody {
+    background-color: white;
+    transition: background-color 0.5s ease-in-out;
+}
+
+#switchButton {
+    background-color: white;
+    color: black;
+    margin: 0 10px;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+#switchButton .fa-sun {
+    display: none;
+}
+
+#switchButton .fa-moon {
+    display: inline-block;
+}
+
+/* Dark Theme*/
+.dark#myBody {
+    background-color: black;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.dark #switchButton {
+    background-color: black;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.dark #switchButton .fa-sun {
+    display: block;
+    color: white;
+}
+
+.dark #switchButton .fa-moon {
+    display: none;
+}
+
+.dark header a.search-search {
+    background-color: rgb(24, 24, 24);
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+/* .dark #poochcareNav .nav-link */
+.dark .card,
+.dark header button,
+.dark header,
+.dark #poochcareNav .nav-link {
+    background-color: black;
+    color: white;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.dark,
+.dark .gridsystem,
+.dark a.read,
+.dark header a.search-search:hover,
+.dark .gridsystem .card:hover {
+    background-color: rgb(24, 24, 24);
+    color: white;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+/*Header*/
+header {
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    background: white;
+}
+
+header .navbar h1 .navbar-brand {
+    color: #189A46 !important;
+}
+
+header .navbar {
+    justify-content: space-between;
+    align-items: center;
+    line-height: 50px;
+}
+
+header .navbar .navbar-brand {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    color: #189A46;
+}
+
+header a.search-search {
+    color: #189A46;
+    font-size: 15px;
+    background-color: rgba(249, 247, 254, 1);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+header a.search-search:hover {
+    background-color: rgba(24, 154, 70, 0.8);
+}
+
+header button {
+    border: none;
+    background-color: white;
+}
+
+#poochcareNav .nav-link {
+    position: relative;
+    font-size: 1.2rem;
+    padding: 20px 0;
+    margin: 0 .8rem;
+    color: black;
+    transition: color 0.5s ease-in-out;
+}
+
+#poochcareNav .navbar-nav .nav-item.active .nav-link {
+    color: #189A46;
+}
+
+
+#poochcareNav .nav-link:hover {
+    color: #189A46;
+}
+
+#poochcareNav .nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #189A46;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+#poochcareNav .nav-link:hover::before {
+    width: 100%;
+}
+
+/* Change the modal header */
+.modal-content {
+    padding: 15px;
+    top: 50%;
+    max-width: 600px;
+}
+
+.modal-content,
+.modal-header {
+    background-color: transparent;
+    border: none;
+    border-bottom: none;
+}
+
+.modal-header .close {
+    color: rgb(65, 65, 65);
+    font-size: 30px;
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+.modal-body {
+    display: flex;
+    align-items: center;
+}
+
+.modal-body input[type="search"],
+.modal-body button {
+    height: 40px;
+}
+
+.modal-body input[type="search"] {
+    flex: 1;
+    padding: 5px;
+}
+
+.modal-body button {
+    width: 20%;
+    background-color: #189A46;
+    color: white;
+    border: none;
+}
+
+.modal-backdrop {
+    display: none !important;
+}
+
+
+
+
+/* Increase the z-index of the modal */
+
+@media screen and (max-width:992px) {
+    header .navbar .navbar-toggler {
+        background: green;
+    }
+}
+
+
+/* carousel */
+#carouselPortMain .carousel-item>img {
+    /* thường dùng ở main carousel */
+    height: 100vh;
+    object-fit: cover;
+    /* bg-size: cover -> cho background*/
+}
+
+#carouselPortMain .carousel-item {
+    position: relative;
+}
+
+#carouselPortMain .carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the alpha (last parameter) for darkness */
+}
+
+#carouselPortMain .carousel-item img {
+    object-fit: cover;
+}
+
+#carouselPortMain .carousel-item:nth-child(1) .carousel-caption,
+#carouselPortMain .carousel-item:nth-child(3) .carousel-caption {
+    text-align: left;
+    padding: 20px;
+    top: 50%;
+    left:40%;
+    transform: translate(-50%, -50%);
+}
+
+#carouselPortMain .carousel-item:nth-child(2) .carousel-caption,
+#carouselPortMain .carousel-item:nth-child(4) .carousel-caption {
+    text-align: left;
+    padding: 20px;
+    top: 50%;
+    left:50%;
+    transform: translate(-20%, -50%);
+}
+
+#carouselPortMain .carousel-caption h1{
+    font-size: 66px;
+    line-height: 76px;
+    font-weight: 700;
+}
+
+#carouselPortMain .carousel-caption p{
+    line-height: 30px;
+    opacity:0.9;
+}
+
+#carouselPortMain .carousel-indicators li.active {
+    background-color: green;
+    height: 5px;
+}
+
+#carouselPortMain .carousel-indicators li:not(.active) {
+    background-color: white;
+    border-radius: 50%; 
+    width: 10px; 
+    height: 10px;
+    margin: 0 5px; 
+}
+
+/* About Us */
+.aboutus__content {
+    text-align: center;
+}
+
+.aboutus__content p:first-of-type {
+    font-size: 18px;
+    font-weight: 600;
+    color: #f55f8d;
+}
+
+.aboutus__content h2 {
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 600
+}
+
+
+/* Grid System */
+.gridsystem {
+    padding: 80px 50px;
+    background-color: #f9f7fe;
+}
+
+.gridsystem .card {
+    padding: 30px 30px;
+    margin: 15px 0;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+
+.gridsystem .card .icon {
+    color: #189a46;
+    font-size: 30px;
+}
+
+.gridsystem .card h5 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+
+.gridsystem .card:hover {
+    background-color: rgba(249, 247, 254, 1);
+}
