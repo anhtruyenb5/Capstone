@@ -1,9 +1,7 @@
-/*! GLOBAL */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 
@@ -356,14 +354,9 @@ header button {
     background-color: rgba(249, 247, 254, 1);
 }
 
-html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+html,
 body {
-
+    font-family: 'Jost', sans-serif;
     line-height: 1.5;
 }
 
